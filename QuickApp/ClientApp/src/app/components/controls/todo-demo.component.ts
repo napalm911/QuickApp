@@ -1,6 +1,6 @@
 // =============================
-// Email: info@ebenmonney.com
-// www.ebenmonney.com/templates
+
+
 // =============================
 
 import { Component, OnInit, OnDestroy, Input, TemplateRef, ViewChild } from '@angular/core';

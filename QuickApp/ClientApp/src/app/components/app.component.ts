@@ -1,6 +1,6 @@
 // =============================
-// Email: info@ebenmonney.com
-// www.ebenmonney.com/templates
+
+
 // =============================
 
 import { Component, ViewEncapsulation, OnInit, OnDestroy, ViewChildren, AfterViewInit, QueryList, ElementRef } from '@angular/core';
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   shouldShowLoginModal: boolean;
   removePrebootScreen: boolean;
   newNotificationCount = 0;
-  appTitle = 'QuickApp';
+  appTitle = 'MKM Bolsa Privada';
 
   stickyToasties: number[] = [];
 

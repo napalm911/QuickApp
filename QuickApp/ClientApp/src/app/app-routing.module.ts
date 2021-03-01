@@ -1,6 +1,6 @@
 // =============================
-// Email: info@ebenmonney.com
-// www.ebenmonney.com/templates
+
+
 // =============================
 
 import { NgModule, Injectable } from '@angular/core';

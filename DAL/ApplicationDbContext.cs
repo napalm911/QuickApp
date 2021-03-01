@@ -1,7 +1,4 @@
-﻿// =============================
-// Email: info@ebenmonney.com
-// www.ebenmonney.com/templates
-// =============================
+﻿
 
 using DAL.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;

@@ -1,6 +1,6 @@
 // =============================
-// Email: info@ebenmonney.com
-// www.ebenmonney.com/templates
+
+
 // =============================
 
 // Karma configuration file, see link for more information

@@ -1,6 +1,6 @@
 ﻿// =============================
-// Email: info@ebenmonney.com
-// www.ebenmonney.com/templates
+
+
 // =============================
 
 using System;
@@ -56,12 +56,12 @@ namespace QuickApp.Controllers
         [HttpGet("email")]
         public async Task<string> Email()
         {
-            string recepientName = "QickApp Tester"; //         <===== Put the recepient's name here
-            string recepientEmail = "test@ebenmonney.com"; //   <===== Put the recepient's email here
+            string recepientName = "UserName"; //         <===== Put the recepient's name here
+            string recepientEmail = "soymkm@gmail.com"; //   <===== Put the recepient's email here
 
             string message = EmailTemplates.GetTestEmail(recepientName, DateTime.UtcNow);
 
-            (bool success, string errorMsg) = await _emailSender.SendEmailAsync(recepientName, recepientEmail, "Test Email from QuickApp", message);
+            (bool success, string errorMsg) = await _emailSender.SendEmailAsync(recepientName, recepientEmail, "Test Email from MKM", message);
 
             if (success)
                 return "Success";
