@@ -62,6 +62,12 @@ import { UserPreferencesComponent } from './components/controls/user-preferences
 import { UsersManagementComponent } from './components/controls/users-management.component';
 import { RolesManagementComponent } from './components/controls/roles-management.component';
 import { RoleEditorComponent } from './components/controls/role-editor.component';
+import { RegisterComponent } from './components/register/register.component';
+import { MercadosComponent } from './components/mercados/mercados.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
+import { SimboloComponent } from './components/simbolo/simbolo.component';
+import { WebinarsComponent } from './components/webinars/webinars.component';
+import { CalendarioComponent } from './components/calendario/calendario.component';
 
 
 @NgModule({
@@ -108,7 +114,13 @@ import { RoleEditorComponent } from './components/controls/role-editor.component
     AutofocusDirective,
     BootstrapTabDirective,
     BootstrapToggleDirective,
-    GroupByPipe
+    GroupByPipe,
+    RegisterComponent,
+    MercadosComponent,
+    NoticiasComponent,
+    SimboloComponent,
+    WebinarsComponent,
+    CalendarioComponent
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },

@@ -17,4 +17,9 @@ import { ConfigurationService } from '../../services/configuration.service';
 export class HomeComponent {
   constructor(public configurations: ConfigurationService) {
   }
+
+
+
+
+
 }

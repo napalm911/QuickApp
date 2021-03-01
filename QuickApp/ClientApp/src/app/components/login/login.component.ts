@@ -103,7 +103,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
           if (Utilities.checkNoNetwork(error)) {
             this.alertService.showStickyMessage(Utilities.noNetworkMessageCaption, Utilities.noNetworkMessageDetail, MessageSeverity.error, error);
-            this.offerAlternateHost();
+            //this.offerAlternateHost();
           } else {
             const errorMessage = Utilities.getHttpResponseMessage(error);
 

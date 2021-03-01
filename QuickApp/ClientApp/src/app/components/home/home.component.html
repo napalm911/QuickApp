@@ -1,53 +1,143 @@
-<div class="container">
-  <header class="pageHeader">
-    <h3><i class="fa fa-tachometer fa-lg page-caption" aria-hidden="true"></i> {{'pageHeader.Dashboard' | translate}}</h3>
-  </header>
 
-  <div [@fadeInOut]>
-    <div class="row">
-      <div *ngIf="!configurations.showDashboardStatistics && !configurations.showDashboardNotifications && !configurations.showDashboardTodo && !configurations.showDashboardBanner" class="col-12 my-5">
-        <div class="card card-body bg-light">
-          <h4 class="text-muted text-center">
-            {{'home.NoWidgets1' | translate}} <a routerLink="/settings" fragment="preferences"><i class="fa fa-sliders"></i> {{'settings.tab.Preferences' | translate}}</a>
-            {{'home.NoWidgets2' | translate}}
-          </h4>
+<div class="w3-light-grey">
+  <div class="row" style="padding-top:128px; padding-left:10%; padding-right:10%">
+    <div class="col-sm justify-content-start">
+      <h1 class="title-section-1">Hacemos bolsa</h1>
+      <p class=" content-section-1">Somos un equipo de profesionales altamente especializados en la gestión privada en las bolsas de Nueva York, mercados de deuda privados, ingeniería financiera y fideicomisos.</p>
+      <p class="content-section-2">Descarga nuestra app y dale seguimiento a tus instrumentos financieros favoritos o crea una lista 100% personalizada.</p>
+      <div style="width:100%;height:55%;padding:5px;">
+        <div class="panel panel-default pub-left" id="pub-left" style="background-color:transparent;border:0px">
+          <div class="panel-body text-center nano has-scrollbar" style="height:100%" id="panel-indicadores">
+            <div class="table-responsive nano-content" tabindex="0" style="right: -17px;">
+              <table id="tblIndicadores" class="table table-striped text-responsive" style="background:white">
+                <thead>
+                  <tr style="  background-color: #02697C;color:white;">
+                    <th colspan="5" class="tabla_indicadores text-center">INDICADORES</th>
+                  </tr>
+                  <tr class="active">
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Precio $</th>
+                    <th class="text-center">Cambio</th>
+                    <th class="text-center">% cambio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AAPL</td>
+                    <td>$ 123</td>
+                    <td style="color:red;">123</td>
+                    <td style="color:red;">123</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="nano-pane"><div class="nano-slider" style="height: 230px; transform: translate(0px, 0px);"></div></div>
+          </div>
         </div>
       </div>
-
-      <div *ngIf="configurations.showDashboardStatistics" class="col-12 my-3">
-        <button type="button" class="close" aria-label="Close" title="Close" (click)="configurations.showDashboardStatistics = false">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="clearfix"></div>
-        <div class="card card-body bg-light">
-          <h5 class="text-muted d-inline-block">{{'home.StatisticsTitle' | translate}}</h5>
-          <app-statistics-demo></app-statistics-demo>
+      <div class="row" style="margin-top: 40px;">
+        <div class="col-sm">
+          <a href="https://play.google.com/store/apps/details?id=com.soymkm.bolsa"><img src="assets/images/google-play-logo.png" width="220" height="65" /></a>
+        </div>
+        <div class="col-sm">
+          <a href="https://play.google.com/store/apps/details?id=com.soymkm.bolsa"><img src="assets/images/app-store-logo.png" width="200" height="65" /></a>
         </div>
       </div>
+    </div>
+    <div class="col-sm justify-content-end">
+      <div class="slideshow-container">
 
-      <div *ngIf="configurations.showDashboardNotifications" class="col-12 my-3">
-        <button type="button" class="close" aria-label="Close" title="Close" (click)="configurations.showDashboardNotifications = false">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="clearfix"></div>
-        <app-notifications-viewer></app-notifications-viewer>
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="assets/images/screenshot_app_1.png" width="100%" style="margin-top: 40px;" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="assets/images/screenshot_app_2.png" width="100%" style="margin-top: 40px;" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="assets/images/screenshot_app_3.png" width="100%" style="margin-top: 40px;" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="assets/images/screenshot_app_4.png" width="100%" style="margin-top: 40px;" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="assets/images/screenshot_app_5.png" width="100%" style="margin-top: 40px;" />
+        </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
 
-      <div *ngIf="configurations.showDashboardTodo" class="col-12 my-3">
-        <button type="button" class="close" aria-label="Close" title="Close" (click)="configurations.showDashboardTodo = false">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="clearfix"></div>
-        <app-todo-demo></app-todo-demo>
+    </div>
+  </div>
+  <div class="w3-container padding-container">
+    <h1 class="w3-center title-section-2" style="margin-bottom: 40px;">¿Qué ofrecemos?</h1>
+    <div class="card-deck">
+      <div class="card shadow bg-white" style="padding-top: 40px; border-radius: 20px">
+        <img class="fa" src="assets/images/ic_tecnologia.png" width="73px" height="64px" />
+        <div class="card-body ">
+          <b><h5 class="card-titles">Soluciones Digitales</h5></b>
+          <p class="content-left">Creamos herramientas financieras para nuestros clientes con el proposito de minimizar la interacción humana.</p>
+        </div>
       </div>
-
-      <div *ngIf="configurations.showDashboardBanner" class="col-12 my-3">
-        <button type="button" class="close" aria-label="Close" title="Close" (click)="configurations.showDashboardBanner = false">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="clearfix"></div>
-        <app-banner-demo></app-banner-demo>
+      <div class="card shadow bg-white" style="padding-top: 40px; border-radius: 20px">
+        <img class="fa" src="assets/images/ic_crecimiento.png" width="73px" height="64px" />
+        <div class="card-body">
+          <b><h5 class="card-titles">Crecimiento Financiero</h5></b>
+          <p class="content-left">Nos dedicamos a crecer tu patrimonio minimizando los riesgos que existen en la economía actual.</p>
+        </div>
+      </div>
+      <div class="card shadow bg-white" style="padding-top: 40px; border-radius: 20px">
+        <img class="fa" src="assets/images/ic_bolsa.png" width="73px" height="64px" />
+        <div class="card-body">
+          <b><h5 class="card-titles">Bolsa Privada</h5></b>
+          <p class="content-left">Concentramos nuestros esfuerzos a un grupo selecto de clientes.</p>
+        </div>
+      </div>
+      <div class="card shadow bg-white" style="padding-top: 40px; border-radius: 20px">
+        <img class="fa" src="assets/images/ic_asesoria.png" width="73px" height="64px" />
+        <div class="card-body">
+          <b><h5 class="card-titles">Asesoría Financiera</h5></b>
+          <p class="content-left">Contamos con los mejores asesores en el sector.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+  }
+</script>

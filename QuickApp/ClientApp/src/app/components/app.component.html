@@ -5,11 +5,27 @@
     <div class="container">
       <a ngPreserveWhitespaces class="app-component navbar-brand" routerLink="/">
         <img src="assets/images/logo-white.png" class="d-inline-block align-top" alt="logo">
-        <span class="app-component appTitle">{{appTitle}}</span>
       </a>
       <button type="button" class="app-component navbar-toggler" data-toggle="collapse" data-target=".menuItemsContainer.app-component">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <ul class="app-component nav nav-pills flex-column flex-lg-row mr-auto">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link" routerLink=""><i class="fa fa-home"></i></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/mercados">{{'Mercados' | translate}}</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/noticias">{{'Noticias' | translate}}</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/calendario">{{'Calendario' | translate}}</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/webinars">{{'Webinars' | translate}}</a>
+        </li>
+      </ul>
 
       <div *ngIf="isUserLoggedIn" class="app-component collapse navbar-collapse menuItemsContainer">
         <ul class="app-component nav nav-pills flex-column flex-lg-row mr-auto">
@@ -85,9 +101,21 @@
 
   <footer class="app-component footer fixed-bottom">
     <div class="container">
-      <p class="text-center text-muted">
-        <span style="font-style:italic">MKM </span> BOLSA PRIVADA &copy; {{getYear()}}
-      </p>
+      <div class="col">
+        <p class="text-center text-muted">
+          <span style="font-style:italic">MKM </span> BOLSA PRIVADA &copy; {{getYear()}}
+        </p>
+      </div>
+      <div class="col">
+        <p class="text-center text-muted">
+          <span style="font-style:italic">MKM </span> BOLSA PRIVADA &copy; {{getYear()}}
+        </p>
+      </div>
+      <div class="col">
+        <p class="text-center text-muted">
+          <span style="font-style:italic">MKM </span> BOLSA PRIVADA &copy; {{getYear()}}
+        </p>
+      </div>
     </div>
   </footer>
 
