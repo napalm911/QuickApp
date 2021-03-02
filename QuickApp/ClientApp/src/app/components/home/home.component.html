@@ -31,58 +31,33 @@
                 </tbody>
               </table>
             </div>
-            <div class="nano-pane"><div class="nano-slider" style="height: 230px; transform: translate(0px, 0px);"></div></div>
+
+            <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+              <ng-template ngbSlide *ngFor="let img of images; index as i">
+                <div class="carousel-caption">
+                </div>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="img" alt="{{i + 1}}">
+                  </div>
+              </ng-template>
+            </ngb-carousel>
+
           </div>
         </div>
       </div>
-      <div class="row" style="margin-top: 40px;">
-        <div class="col-sm">
-          <a href="https://play.google.com/store/apps/details?id=com.soymkm.bolsa"><img src="assets/images/google-play-logo.png" width="220" height="65" /></a>
-        </div>
-        <div class="col-sm">
-          <a href="https://play.google.com/store/apps/details?id=com.soymkm.bolsa"><img src="assets/images/app-store-logo.png" width="200" height="65" /></a>
-        </div>
-      </div>
+
     </div>
-    <div class="col-sm justify-content-end">
-      <div class="slideshow-container">
-
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 5</div>
-          <img src="assets/images/screenshot_app_1.png" width="100%" style="margin-top: 40px;" />
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 5</div>
-          <img src="assets/images/screenshot_app_2.png" width="100%" style="margin-top: 40px;" />
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 5</div>
-          <img src="assets/images/screenshot_app_3.png" width="100%" style="margin-top: 40px;" />
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">4 / 5</div>
-          <img src="assets/images/screenshot_app_4.png" width="100%" style="margin-top: 40px;" />
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">5 / 5</div>
-          <img src="assets/images/screenshot_app_5.png" width="100%" style="margin-top: 40px;" />
-        </div>
-
+  </div>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-2">
+        <a href="https://play.google.com/store/apps/details?id=com.soymkm.bolsa"><img src="assets/images/google-play-logo.png" width="220" height="65" /></a>
       </div>
-      <br>
-
-      <div style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+      <div class="col-12 col-md-auto">
       </div>
-
+      <div class="col col-lg-2">
+        <a href="https://play.google.com/store/apps/details?id=com.soymkm.bolsa"><img src="assets/images/app-store-logo.png" width="200" height="65" /></a>
+      </div>
     </div>
   </div>
   <div class="w3-container padding-container">
@@ -119,25 +94,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  var slideIndex = 0;
-  showSlides();
-
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 3000); // Change image every 2 seconds
-  }
-</script>

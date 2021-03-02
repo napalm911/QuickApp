@@ -17,6 +17,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { AboutComponent } from './components/about/about.component';
 import { WebinarsComponent } from './components/webinars/webinars.component';
+import { PrivacidadComponent } from './components/privacidad/privacidad.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthService } from './services/auth.service';
@@ -49,6 +50,7 @@ export class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 
 const routes: Routes = [
     { path: '', component: HomeComponent, data: { title: 'Home' } },
+    { path: 'privacidad', component: PrivacidadComponent, data: { title: 'Privacidad' } },
     { path: 'mercados', component: MercadosComponent, data: { title: 'Mercados' } },
     { path: 'calendario', component: CalendarioComponent, data: { title: 'Calendario' } },
     { path: 'noticias', component: NoticiasComponent, data: { title: 'Noticias' } },

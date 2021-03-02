@@ -68,6 +68,8 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
 import { SimboloComponent } from './components/simbolo/simbolo.component';
 import { WebinarsComponent } from './components/webinars/webinars.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PrivacidadComponent } from './components/privacidad/privacidad.component';
 
 
 @NgModule({
@@ -92,7 +94,8 @@ import { CalendarioComponent } from './components/calendario/calendario.componen
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,
@@ -120,7 +123,8 @@ import { CalendarioComponent } from './components/calendario/calendario.componen
     NoticiasComponent,
     SimboloComponent,
     WebinarsComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    PrivacidadComponent
   ],
   providers: [
     { provide: ErrorHandler, useClass: AppErrorHandler },

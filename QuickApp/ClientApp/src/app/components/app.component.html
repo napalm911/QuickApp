@@ -65,17 +65,17 @@
           </li>
         </ul>
       </div>
-      <div *ngIf="!isUserLoggedIn && router.isActive('/about', false)" class="app-component collapse navbar-collapse menuItemsContainer">
+      <div *ngIf="!isUserLoggedIn && router.isActive('/register', false)" class="app-component collapse navbar-collapse menuItemsContainer">
         <ul class="app-component nav nav-pills flex-column flex-lg-row ml-auto">
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/login"><i class="fa fa-sign-in"></i></a>
+            <a class="nav-link" routerLink="/login">Iniciar Sesion</a>
           </li>
         </ul>
       </div>
-      <div *ngIf="!isUserLoggedIn && !router.isActive('/about', false) || false" class="app-component collapse navbar-collapse menuItemsContainer">
+      <div *ngIf="!isUserLoggedIn && !router.isActive('/register', false) || false" class="app-component collapse navbar-collapse menuItemsContainer">
         <ul class="app-component nav nav-pills flex-column flex-lg-row ml-auto">
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/about"><i class="fa fa-info-circle"></i></a>
+            <a class="nav-link" routerLink="/register">Registrate</a>
           </li>
         </ul>
       </div>
@@ -100,7 +100,8 @@
   </main>
 
   <footer class="app-component footer fixed-bottom">
-    <div class="container">
+    <div class="row">
+
       <div class="col">
         <p class="text-center text-muted">
           <span style="font-style:italic">MKM </span> BOLSA PRIVADA &copy; {{getYear()}}
@@ -108,12 +109,7 @@
       </div>
       <div class="col">
         <p class="text-center text-muted">
-          <span style="font-style:italic">MKM </span> BOLSA PRIVADA &copy; {{getYear()}}
-        </p>
-      </div>
-      <div class="col">
-        <p class="text-center text-muted">
-          <span style="font-style:italic">MKM </span> BOLSA PRIVADA &copy; {{getYear()}}
+          <a class="nav-link" routerLink="/privacidad">{{'Aviso de Privacidad' | translate}}</a>
         </p>
       </div>
     </div>

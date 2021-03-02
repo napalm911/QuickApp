@@ -14,10 +14,13 @@ main.app-component {
 }
 
 footer.app-component {
-    width: 100%;
-    height: $footerHeight;
-    line-height: $footerHeight;
-    background-color: #f5f5f5;
+  width: 100%;
+  height: $footerHeight;
+  line-height: $footerHeight;
+  background-color: black;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  z-index: 100;
 }
 
 
@@ -67,3 +70,5 @@ footer.app-component {
     opacity: 0;
     transition: .5s ease-in-out all;
 }
+
+
