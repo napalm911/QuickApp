@@ -8,7 +8,22 @@
       </div>
     </div>
   </section>
-  <div class="container fa-align-center">
-    <p>TABLAS DE STRAPI</p>
+  <div class="container align-center">
+
+    <p>
+      <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+              aria-controls="collapseExample">
+        Toggle
+      </button>
+    </p>
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+      <div class="card">
+        <div class="card-body">
+          You can collapse this card by clicking Toggle
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </div>

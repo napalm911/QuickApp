@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MercadosIndices } from '../../models/mercados-indices';
+import { MercadosService } from '../../services/mercados.service';
 
 @Component({
   selector: 'app-mercados',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MercadosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: MercadosService) { }
+
+  public isCollapsed = false;
+  INDICES_DATA: MercadosIndices[];
+
 
   ngOnInit(): void {
   }
